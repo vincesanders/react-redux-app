@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Options } from './components';
+import { Options, Chart } from './components';
 
 import './App.css';
 
