@@ -7,6 +7,7 @@ import {
 const initialState = {
     isLoading: false,
     data: null,
+    days: 7,
     error: ''
 }
 
@@ -22,7 +23,8 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 isLoading: false,
-                data: action.payload
+                data: action.payload.data,
+                days: action.payload.days
             }
         default:
             return state;
