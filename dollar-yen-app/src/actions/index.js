@@ -6,12 +6,13 @@ export const FETCHING_DATA_FAILURE = "FETCHING_DATA_FAILURE";
 
 export const fetchData = () => dispatch => {
     dispatch({ type: FETCHING_DATA_START });
-    // axios
-    //     .get()
-    //     .then(res => {
-    //         console.log(res);
-    //     })
-    //     .catch(err => {
-    //         console.log(err);
-    //     })
+    axios
+        .get('https://financialmodelingprep.com/api/v3/historical-price-full/forex/USDJPY')
+        .then(res => {
+            console.log(res.data);
+            dispatch({ type: FETCHING_DATA_SUCCESS, payload: res.data});
+        })
+        .catch(err => {
+            console.log(err);
+        })
 }

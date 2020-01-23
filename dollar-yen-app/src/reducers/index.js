@@ -18,6 +18,12 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 isLoading: true
             }
+        case FETCHING_DATA_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                data: action.payload
+            }
         default:
             return state;
     }
