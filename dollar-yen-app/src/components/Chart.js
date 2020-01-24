@@ -28,7 +28,7 @@ export default () => {
             }
         }
     }
-    
+    formattedData.reverse();
     const CustomTooltip = ({ active, payload, label }) => {
         if (active) {
           return (
